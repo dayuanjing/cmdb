@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目组列表</title>
+</head>
+<body>
+<div>
+    <a href="add/">添加项目组</a>
+</div>
+    </br>
+    </br>
+<table border="1" cellpadding="10">
+    <tr>
+        <th>项目组</th>
+        <th>操作</th>
+    </tr>
+    {% if all_item %}
+        {% for item in all_item %}
+        <tr>
+            <td>{{ item.item_name }}</td>
+            <td>
+                <a href="">详情</a>
+                <a href="">编辑</a>
+                <a href="">更新</a>
+            </td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>机房列表</title>
+</head>
+<body>
+<div>
+    <a href="add/">添加机房</a>
+</div>
+    </br>
+    </br>
+<table border="1" cellpadding="10">
+    <tr>
+        <th>idc名字</th>
+        <th>idc地址</th>
+        <th>idc客服电话</th>
+        <th>邮箱地址</th>
+        <th>操作</th>
+    </tr>
+    {% if all_idc %}
+        {% for idc in all_idc %}
+        <tr>
+            <td>{{ idc.idc_name }}</td>
+            <td>{{ idc.idc_address }}</td>
+            <td>{{ idc.idc_phone }}</td>
+            <td>{{ idc.idc_email }}</td>
+            <td>
+                <a href="">详情</a>
+                <a href="">编辑</a>
+                <a href="">更新</a>
+            </td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+</body>
+</html>

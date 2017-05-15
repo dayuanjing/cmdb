@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务器列表</title>
+</head>
+<body>
+<div>
+    <a href="add/">添加服务器</a>
+</div>
+    </br>
+    </br>
+<table border="1" cellpadding="10">
+    <tr>
+        <th>快速服务编号</th>
+        <th>服务器发货日期</th>
+        <th>服务器IP</th>
+        <th>服务器型号</th>
+        <th>所属机房</th>
+        <th>所属组</th>
+        <th>操作</th>
+    </tr>
+
+    {% if all_servers %}
+        {% for servers in all_servers %}
+        <tr>
+            <td>{{ servers.server_number }}</td>
+            <td>{{ servers.server_delivery_date }}</td>
+            <td>{{ servers.server_ip }}</td>
+            <td>{{ servers.server_version }}</td>
+            <td>{{ servers.idc_group }}</td>
+            <td>{{ servers.item_group }}</td>
+            <td>
+                <a href="">详情</a>
+                <a href="">编辑</a>
+                <a href="">更新</a>
+            </td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+
+</table>
+</body>
+</html>

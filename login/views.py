@@ -5,7 +5,7 @@ from .models import User
 
 
 # Create your views here.
-def index(request):
+def login(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']

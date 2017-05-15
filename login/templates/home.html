@@ -5,6 +5,14 @@
     <title>cmdb</title>
 </head>
 <body>
-{{ message }}
+    {{ message }}
+    <br>
+    <br>
+    <div>
+        <a href="{% url 'servers:server_list' %}" methods="get"> 服务器列表 </a>
+        <a href="{% url 'servers:idc_list' %}" methods="get"> 机房列表 </a>
+        <a href="{% url 'servers:item_list' %}" methods="get"> 项目组列表 </a>
+    </div>
+
 </body>
 </html>
